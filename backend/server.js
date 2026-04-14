@@ -27,7 +27,7 @@ console.log(`  JWT_SECRET     : ${process.env.JWT_SECRET.slice(0,8)}...`);
 const app  = express();
 const PORT = process.env.PORT || 5000;
 
-app.use(cors({ origin: ['http://localhost:5173', 'http://localhost:3000'], credentials: true }));
+app.use(cors({ origin: ['http://localhost:5173', 'http://localhost:3000', "https://flash-note-eight.vercel.app/"], credentials: true }));
 app.use(express.json({ limit: '50mb' }));
 app.use(express.urlencoded({ extended: true, limit: '50mb' }));
 
